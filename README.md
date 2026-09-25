@@ -22,21 +22,56 @@
 - **배포**: Vercel
 - **개발 환경**: GitHub Codespaces (개인 노트북 없이 브라우저에서 개발)
 
-## 폴더 구조 (초안)
+## 폴더 구조
 ```
-debrief/
-├── app/
-│   ├── page.tsx                # 랜딩
-│   ├── interview/[id]/page.tsx # 인터뷰 세션 화면
-│   ├── docs/[id]/page.tsx      # 완성된 문서 공유 화면
-│   └── api/
-│       ├── interview/route.ts  # 대화 처리 + AI 후속 질문 생성
-│       └── generate-doc/route.ts # 최종 문서 생성
-├── lib/
-│   ├── supabase.ts
-│   └── claude.ts
-├── components/
-└── README.md
+Directory structure:
+└── jjaanngg-renewal_isig/
+    ├── README.md
+    ├── AGENTS.md
+    ├── CLAUDE.md
+    ├── eslint.config.mjs
+    ├── next.config.ts
+    ├── package.json
+    ├── postcss.config.mjs
+    ├── tsconfig.json
+    ├── app/
+    │   ├── layout.tsx
+    │   ├── page.tsx
+    │   ├── api/
+    │   │   ├── generate-doc/
+    │   │   │   └── route.ts
+    │   │   └── interview/
+    │   │       └── route.ts
+    │   ├── dashboard/
+    │   │   ├── page.tsx
+    │   │   ├── documents/
+    │   │   │   └── page.tsx
+    │   │   └── settings/
+    │   │       └── page.tsx
+    │   ├── docs/
+    │   │   └── [slug]/
+    │   │       ├── page.tsx
+    │   │       └── edit/
+    │   │           └── page.tsx
+    │   ├── home/
+    │   │   └── page.tsx
+    │   ├── interview/
+    │   │   └── page.tsx
+    │   ├── login/
+    │   │   └── page.tsx
+    │   └── my/
+    │       └── page.tsx
+    ├── components/
+    │   ├── AppShell.tsx
+    │   ├── BackLink.tsx
+    │   ├── DashboardShell.tsx
+    │   ├── LogoutButton.tsx
+    │   ├── MarkdownDoc.tsx
+    │   ├── PrintButton.tsx
+    │   └── ReportView.tsx
+    └── lib/
+        └── supabase.ts
+
 ```
 
 ## 데이터 모델 (초안)
